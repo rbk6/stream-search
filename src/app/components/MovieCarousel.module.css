@@ -1,0 +1,36 @@
+.carousel,
+.container,
+.slides,
+.card {
+	display: flex;
+}
+
+.carousel {
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 5em;
+}
+
+.slides {
+	width: 85vw;
+	height: 450px;
+	align-items: center;
+	overflow-x: auto;
+	white-space: nowrap;
+	margin-top: 1em;
+}
+
+.card {
+	width: 300px;
+	margin: 0 1em;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+}
+
+.poster {
+	height: 400px;
+	width: auto;
+	box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+}
