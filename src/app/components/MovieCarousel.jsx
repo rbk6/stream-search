@@ -1,9 +1,9 @@
 'use client'
 
 import { Splide, SplideSlide } from '@splidejs/react-splide'
+import '@splidejs/react-splide/css'
 import { AutoScroll } from '@splidejs/splide-extension-auto-scroll'
 import styles from './MovieCarousel.module.css'
-import '@splidejs/react-splide/css'
 
 export default function MovieCarousel({ movies, label, speed }) {
 	return (

@@ -1,7 +1,7 @@
 import MovieCarousel from './components/MovieCarousel'
 import { getMovieLists } from './lib/api'
-import styles from './page.module.css'
 import { MOVIE_LISTS } from './lib/constants'
+import styles from './page.module.css'
 
 export default async function Home() {
 	const nowPlaying = await getMovieLists(MOVIE_LISTS.NOW_PLAYING)
