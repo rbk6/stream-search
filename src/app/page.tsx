@@ -13,10 +13,10 @@ export default async function Home() {
 		<div className={styles.page}>
 			<header></header>
 			<main className={styles.main}>
-				<MovieCarousel label={'Now Playing'} movies={nowPlaying.results} />
-				<MovieCarousel label={'Upcoming'} movies={upcoming.results} />
-				<MovieCarousel label={'Popular'} movies={popular.results} />
-				<MovieCarousel label={'Top Rated'} movies={topRated.results} />
+				<MovieCarousel movies={nowPlaying.results} label={'Now Playing'} speed={0.1} />
+				<MovieCarousel movies={upcoming.results} label={'Upcoming'} speed={-0.1} />
+				<MovieCarousel movies={popular.results} label={'Popular'} speed={0.1} />
+				<MovieCarousel movies={topRated.results} label={'Top Rated'} speed={-0.1} />
 			</main>
 			<footer></footer>
 		</div>

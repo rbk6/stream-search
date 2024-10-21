@@ -1,29 +1,30 @@
-.carousel,
-.container,
-.slides,
-.card {
-	display: flex;
-}
-
 .carousel {
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	margin-bottom: 5em;
+	position: relative;
+	overflow: hidden;
+	margin-bottom: 120px;
+	width: 85vw;
 }
 
-.slides {
-	width: 85vw;
-	height: 450px;
-	align-items: center;
-	overflow-x: auto;
-	white-space: nowrap;
-	margin-top: 1em;
+.vignette {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 2;
+	pointer-events: none;
+	background: radial-gradient(circle, rgba(var(--background), 0) 75%, rgba(var(--background), 1) 100%);
+}
+
+.title {
+	z-index: 3;
+	margin-top: 12px;
 }
 
 .card {
 	width: 300px;
 	margin: 0 1em;
+	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-content: center;
@@ -32,5 +33,9 @@
 .poster {
 	height: 400px;
 	width: auto;
-	box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+	transition: transform 0.2s;
+}
+
+.poster:hover {
+	transform: scale(1.1);
 }
