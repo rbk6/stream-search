@@ -14,7 +14,7 @@ export default function MovieCarousel({ movies, label, speed }) {
 					options={{
 						type: 'loop',
 						autoScroll: {
-							pauseOnHover: false,
+							pauseOnHover: true,
 							pauseOnFocus: false,
 							speed: speed,
 							rewind: true
@@ -29,7 +29,7 @@ export default function MovieCarousel({ movies, label, speed }) {
 						<SplideSlide key={`${label}-${index}`}>
 							<img
 								className={styles.poster}
-								src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
+								src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
 								alt={movie.title}
 							/>
 						</SplideSlide>

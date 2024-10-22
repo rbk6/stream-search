@@ -3,7 +3,7 @@
 	--foreground: 23, 23, 23;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
 	:root {
 		--background: 10, 10, 10;
 		--foreground: 237, 237, 237;
@@ -34,8 +34,17 @@ main {
 	width: 100%;
 }
 
+.splide__arrows button:hover {
+	transition: background-color 0.3s ease;
+}
+
 .splide__arrows button {
 	z-index: 3;
+	background: rgb(var(--foreground));
+}
+
+.splide__arrows button svg {
+	fill: rgb(var(--background));
 }
 
 a {
