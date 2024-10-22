@@ -2,7 +2,6 @@ import MovieCarousel from './components/MovieCarousel'
 import Search from './components/Search'
 import { getMovieLists } from './lib/api'
 import { MOVIE_LISTS } from './lib/constants'
-import styles from './page.module.css'
 
 export default async function Home() {
 	const nowPlaying = await getMovieLists(MOVIE_LISTS.NOW_PLAYING)
@@ -11,9 +10,9 @@ export default async function Home() {
 	const topRated = await getMovieLists(MOVIE_LISTS.TOP_RATED)
 
 	return (
-		<div className={styles.page}>
+		<div className="page">
 			<header></header>
-			<main className={styles.main}>
+			<main className="main">
 				<Search />
 				<MovieCarousel movies={nowPlaying.results} label={'Now Playing'} speed={0.1} />
 				<MovieCarousel movies={upcoming.results} label={'Upcoming'} speed={-0.1} />
